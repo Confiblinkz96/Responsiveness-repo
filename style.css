@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* Desktop styling */
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+
+header {
+    padding: 1.5rem 4rem;
+    background-color: rgb(175, 175, 239);
+}
+
+nav a {
+    color: black;
+    font-size: 1.1rem;
+}
+
+#logo {
+    font-size: 1.5rem;
+    color: #2de7e7;
+    font-weight: 700;
+}
+
+.fa-bars {
+    display: none;
+}
+
+nav ul.active{
+    left: 0;
+}
+
+/* Media Query Styling */
+
+@media only screen and (max-width: 1024) {
+    header {
+        padding: 1.3rem 3.5rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    nav a {
+        color: black;
+        font-size: 0.9rem;
+    }
+    .fa-bars{
+        display: block;
+    }
+    nav ul {
+        position: fixed;
+        top: 80px;
+        height: calc(100vh - 80px);
+        border: 1px solid red;
+        width: 100%;
+        left: -100vh;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 3.5rem;
+        background-color: blue;
+        transition: 3s;
+    }
+}
+@media only screen and (max-width: 600px){
+    header {
+        padding: 1rem 2rem;
+    }
+    #logo {
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+}
